@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:web_portal/screens/login_screen.dart';
 import 'package:web_portal/screens/register_screen.dart';
 import 'package:web_portal/screens/welcome_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+    apiKey: 'AIzaSyB6HTwi_8Lyixn_HvFnUquzZy5oS0rLqwk',
+    appId: '1:973996384416:web:70336c664d112e9acce9c5',
+    messagingSenderId: '973996384416',
+    projectId: 'billmanagement-99681',
+    storageBucket: 'billmanagement-99681.appspot.com',
+  ));
   runApp(const MyApp());
 }
 
