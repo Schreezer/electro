@@ -33,8 +33,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.17.4
   firebase_core: ^2.25.4
+  fl_chart: ^0.66.2
+  floating_bubbles: ^2.6.2
   flutter:
     sdk: flutter
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

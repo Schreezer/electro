@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:web_portal/screens/home_screen.dart';
 import 'package:web_portal/screens/login_screen.dart';
+import 'package:web_portal/screens/profile_screen.dart';
 import 'package:web_portal/screens/register_screen.dart';
 import 'package:web_portal/screens/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,6 +16,7 @@ void main() async {
     projectId: 'billmanagement-99681',
     storageBucket: 'billmanagement-99681.appspot.com',
   ));
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -24,19 +27,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         brightness: Brightness.dark, // Set the theme brightness to dark
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           bodyText1:
               TextStyle(color: Colors.white), // Set the text color to white
         ),
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => WelcomeScreen(),
-        '/login': (context) => LoginScreen(),
-        '/register': (context) => RegistrationScreen(),
+        '/': (context) => const WelcomeScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegistrationScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/profile': (context) => const ProfileScreen(),
       },
     );
   }

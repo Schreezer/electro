@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "973996384416",
+    "project_id": "billmanagement-99681",
+    "storage_bucket": "billmanagement-99681.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973996384416:android:d34f9ffaf01c149ecce9c5",
+        "android_client_info": {
+          "package_name": "com.example.web_portal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgbf4lWINmSKxEPGbQk5iskTV2UW5-I2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

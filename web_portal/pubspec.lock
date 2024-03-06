@@ -89,6 +89,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  equatable:
+    dependency: transitive
+    description:
+      name: equatable
+      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -145,6 +153,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.4"
+  fl_chart:
+    dependency: "direct main"
+    description:
+      name: fl_chart
+      sha256: "00b74ae680df6b1135bdbea00a7d1fc072a9180b7c3f3702e4b19a9943f5ed7d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.66.2"
+  floating_bubbles:
+    dependency: "direct main"
+    description:
+      name: floating_bubbles
+      sha256: "4f39efc44eb5777861e346aa747950b605c2ba538ec0c67e9a2219330191f533"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -176,6 +200,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  intl_phone_field:
+    dependency: "direct main"
+    description:
+      name: intl_phone_field
+      sha256: "73819d3dfcb68d2c85663606f6842597c3ddf6688ac777f051b17814fe767bbf"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.0"
   js:
     dependency: transitive
     description:
@@ -232,6 +264,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  sa4_migration_kit:
+    dependency: transitive
+    description:
+      name: sa4_migration_kit
+      sha256: "635df6de79b8b396705a630ba2d7bc7a2a1df4f69b4bfc10aa104290f6fdca85"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  simple_animations:
+    dependency: transitive
+    description:
+      name: simple_animations
+      sha256: "1ea7b93fb98e2a611b6865d632de55607b766328d14700143353129ee0559d3a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -311,4 +359,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.4 <4.0.0"
-  flutter: ">=3.3.0"
+  flutter: ">=3.16.0"

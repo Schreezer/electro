@@ -40,66 +40,63 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        // Use Container for explicit black background
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedOpacity(
-                duration: const Duration(seconds: 1),
-                opacity: _opacityAnimation.value,
-                child: const Text(
-                  "Generate your electricity bill here",
-
-                ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedOpacity(
+              duration: const Duration(seconds: 1),
+              opacity: _opacityAnimation.value,
+              child: const Text(
+                "Generate your electricity bill here",
+      
               ),
-              AnimatedTextKit(
-                animatedTexts: [
-                  TyperAnimatedText(
-                    "Welcome to the Web Portal",
-                    textAlign: TextAlign.center,
-                    textStyle: const TextStyle(
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold,
-
-                      decoration: TextDecoration.none, // Remove underline
-                    ),
+            ),
+            AnimatedTextKit(
+              animatedTexts: [
+                TyperAnimatedText(
+                  "Welcome to the Web Portal",
+                  textAlign: TextAlign.center,
+                  textStyle: const TextStyle(
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+      
+                    decoration: TextDecoration.none, // Remove underline
                   ),
-                ],
-                totalRepeatCount: 1,
-                repeatForever: false,
-                pause: const Duration(milliseconds: 1000),
-                displayFullTextOnTap: true,
-                stopPauseOnTap: true,
-                onTap: () {
-                  // print('Text pressed');
-                },
-                onFinished: () {
-                  // print('Animation finished');
-                },
-                isRepeatingAnimation: false,
-              ),
-              const SizedBox(height: 20),
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      },
-                      child: Text("Login"),
-                    ),
-                    SizedBox(width: 10),
-                    ElevatedButton(onPressed: () {
-                        Navigator.pushNamed(context, '/register');
-                      },child: Text("Register")),
-                  ],
                 ),
+              ],
+              totalRepeatCount: 1,
+              repeatForever: false,
+              pause: const Duration(milliseconds: 1000),
+              displayFullTextOnTap: true,
+              stopPauseOnTap: true,
+              onTap: () {
+                // print('Text pressed');
+              },
+              onFinished: () {
+                // print('Animation finished');
+              },
+              isRepeatingAnimation: false,
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    child: const Text("Login"),
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(onPressed: () {
+                      Navigator.pushNamed(context, '/register');
+                    },child: const Text("Register")),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

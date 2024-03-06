@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // For number input formatting
 
 class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({super.key});
+  const RegistrationScreen({Key? key}) : super(key: key);
 
   @override
   State<RegistrationScreen> createState() => _RegistrationScreenState();
@@ -30,19 +30,29 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0), // Decreased padding
         child: Form(
           key: _formKey,
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(child: Text("Registeration", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,))),
+                const SizedBox(height:   30), // Decreased space at the top
+                const Text(
+                  "Registration",
+                  style: TextStyle(fontSize:   24, fontWeight: FontWeight.bold), // Decreased font size
+                ),
+                const SizedBox(height:   10), // Decreased space between fields
                 TextFormField(
                   controller: _nameController,
-                  decoration: const InputDecoration(labelText: 'Name'),
+                  decoration: InputDecoration(
+                    labelText: 'Name',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    isDense: true, // Use isDense to reduce height
+                  ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your name';
@@ -50,10 +60,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height:   10), // Decreased space between fields
                 TextFormField(
                   controller: _blockNumberController,
-                  decoration: const InputDecoration(labelText: 'Block Number (Capital)'),
+                  decoration: InputDecoration(
+                    labelText: 'Block Number (Capital)',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    isDense: true, // Use isDense to reduce height
+                  ),
                   inputFormatters: [
                     FilteringTextInputFormatter.allow(RegExp('[A-Z]')), // Allow only uppercase
                   ],
@@ -64,10 +80,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height:   10), // Decreased space between fields
                 TextFormField(
                   controller: _houseNumberController,
-                  decoration: const InputDecoration(labelText: 'House Number'),
+                  decoration: InputDecoration(
+                    labelText: 'House Number',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    isDense: true, // Use isDense to reduce height
+                  ),
                   keyboardType: TextInputType.number,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly], // Allow only numbers
                   validator: (value) {
@@ -77,10 +99,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height:   10), // Decreased space between fields
                 TextFormField(
                   controller: _emailController,
-                  decoration: const InputDecoration(labelText: 'Email'),
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    isDense: true, // Use isDense to reduce height
+                  ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your email';
@@ -89,10 +117,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height:   10), // Decreased space between fields
                 TextFormField(
                   controller: _passwordController,
-                  decoration: const InputDecoration(labelText: 'Password'),
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    isDense: true, // Use isDense to reduce height
+                  ),
                   obscureText: true, // Hide password characters
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -102,7 +136,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     return null;
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height:   10), // Decreased space between fields
                 Center(
                   child: ElevatedButton(
                     onPressed: () {
@@ -112,9 +146,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       }
                     },
                     style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(200, 50), // Make the button bigger
+                      foregroundColor: Colors.white, backgroundColor: Colors.black, // Use white color for the text
+                      minimumSize: const Size(150,   40), // Decreased button size
+                      shape: RoundedRectangleBorder( // Use a rounded rectangle border
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize:   14, // Decreased font size
+                      ),
                     ),
-                    child: const Text('Register', style: TextStyle(fontSize: 18),),
+                    child: const Text('Register', style: TextStyle(fontSize:   14),), // Decreased font size
                   ),
                 ),
               ],
