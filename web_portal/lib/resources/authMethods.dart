@@ -9,7 +9,7 @@ class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;// utility of this is yet to be determined
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   late UserCredential Cred;
-
+  
   Future<model.User?> getUserDetails() async {
     try {
       User? currentUser = _auth.currentUser;

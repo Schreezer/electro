@@ -123,12 +123,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       double.infinity, // Adjusted to take the remaining space
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: BarChart(
-                      BarChartData(
-                        barGroups: _barGroups,
-                        // Customize your chart appearance here
-                      ),
-                    ),
+                    child: LineChart(
+  LineChartData(
+    lineBarsData: [
+      LineChartBarData(
+        spots: [
+          FlSpot(0, 30),
+          FlSpot(1, 60),
+          FlSpot(2, 90),
+          // Add more data points here
+        ],
+        isCurved: true, // Set to true for curved lines
+        // colors: [Colors.blue], // Customize line color
+        barWidth: 4, // Adjust line width
+        isStrokeCapRound: true, // Round line ends
+      ),
+    ],
+    // Customize your line chart appearance here
+  ),
+),
                   ),
                 ),
               ],

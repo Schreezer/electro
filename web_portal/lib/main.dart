@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portal/providers/userProvider.dart';
+import 'package:web_portal/screens/entry_point.dart';
 import 'package:web_portal/screens/home_screen.dart';
 import 'package:web_portal/screens/login_screen.dart';
 import 'package:web_portal/screens/profile_screen.dart';
@@ -50,12 +51,14 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: initial_route,
         routes: {
-          '/': (context) => const WelcomeScreen(),
+          '/' : (context) => const EntryPoint(),
+          '/welcome': (context) => const WelcomeScreen(),
           '/login': (context) => const LoginScreen(),
           '/register': (context) => const RegistrationScreen(),
           '/home': (context) => const HomeScreen(),
           '/profile': (context) => const ProfileScreen(),
         },
+        // home: const WelcomeScreen(),
       ),
     );
   }
